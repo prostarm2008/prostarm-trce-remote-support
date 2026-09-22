@@ -2762,10 +2762,7 @@ function openUpdateFormImpl(ticketId){
       '<textarea class="inp" id="uAction" maxlength="1000" placeholder="What did you do to fix it?">' + esc(c.correctiveAction) + '</textarea></div>' +
     '<div class="frow"><div class="fld"><label>Spare required<span class="req">*</span></label><select class="inp" id="uSpare">' +
       '<option value="">Select…</option><option' + (c.spareRequired === 'Yes' ? ' selected' : '') + '>Yes</option><option' + (c.spareRequired === 'No' ? ' selected' : '') + '>No</option></select></div>' +
-      '<div class="fld"><label>Spare name<span class="req">*</span></label><input class="inp" id="uSpareName" maxlength="100" value="' + esc(c.spareName) + '" disabled></div></div>' +
-    '<div class="fld"><label>TAT slab<span class="req">*</span></label><select class="inp" id="uTat"><option value="">Select…</option>' +
-      cfg.tatSlabs.map(t => '<option' + (t === c.tatSlab ? ' selected' : '') + '>' + esc(t) + '</option>').join('') + '</select>' +
-      '<div class="hint">How long this call took to attend, measured from the raise date.</div></div>' +
+      '<div class="fld"><label>Spare name<span class="req">*</span></label><input class="inp" id="uSpareName" maxlength="100" value="' + esc(c.spareName) + '" disabled></div></div>' 
     '<fieldset class="box"><legend>Photos <span class="mut sm">(optional)</span></legend>' +
       '<div id="uPhotoOld" class="' + ((c.photos || []).length ? '' : 'hide') + '" style="margin-bottom:12px">' +
         '<label class="mut sm" style="display:block;margin-bottom:6px">Already on this ticket</label>' + photoStrip(c, false) + '</div>' +
